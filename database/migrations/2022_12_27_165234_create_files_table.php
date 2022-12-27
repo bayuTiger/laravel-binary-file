@@ -19,6 +19,7 @@ class CreateFilesTable extends Migration
             $table->binary('content');
             $table->timestamps();
         });
+        DB::statement('ALTER TABLE files MODIFY content LONGBLOB not null');
     }
 
     /**
